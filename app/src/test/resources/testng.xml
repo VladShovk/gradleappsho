@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestSuite" verbose="1">
+    <test name="Simple Test Setup/Teardown">
+        <classes>
+            <class name="com.example.SimpleTest"/>
+        </classes>
+    </test>
+    <test name="Test Groups">
+        <groups>
+            <run>
+                <include name="toInclude"/>
+                <exclude name="toExclude"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.example.TestClassOne"/>
+        </classes>
+    </test>
+    <test name="Prioritized tests">
+        <classes>
+            <class name="com.example.TestClassThree"/>
+        </classes>
+    </test>
+    <test name="Parametrized tests">
+        <parameter name="brand" value="Tesla"/>
+        <parameter name="model" value="Model X"/>
+        <classes>
+            <class name="com.example.TestClassTwo"/>
+        </classes>
+    </test>
+</suite>
